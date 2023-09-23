@@ -16,7 +16,7 @@ Como administrador, desejo acessar uma página ou interface dedicada à visualiz
   
 Na página de visualização de usuários, deve haver uma tabela que liste todos os usuários da nossa base de dados.
   
-  A tabela deve exibir as seguintes informações de cada usuário: nome, sobrenome, endereço de e-mail,
+  A tabela deve exibir as seguintes informações de cada usuário: nome, cep, endereço de e-mail,
 data de cadastro e quaisquer outros campos relevantes.
   
 Deve haver um campo de pesquisa que permita ao administrador buscar usuários com base em critérios como nome, sobrenome ou e-mail.

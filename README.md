@@ -6,8 +6,9 @@ Visualização e Gerenciamento de Usuários na Tabela
 ## Descrição:
 ````
 Como um administrador do sistema, desejo criar uma tabela que exiba uma lista dos usuários
-presentes em nossa base de dados. Essa tabela deve incluir um recurso de pesquisa para facilitar a localização de
-usuários específicos, além de oferecer a funcionalidade de edição e exclusão de registros de usuário.
+presentes em nossa base de dados. Essa tabela deve incluir um recurso de pesquisa para facilitar a
+localização de usuários específicos, além de oferecer a funcionalidade de edição e exclusão
+de registros de usuário.
 ````
 ##  Critérios de Aceitação:
 ````

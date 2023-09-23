@@ -18,7 +18,7 @@ lerBaseDeDados = async () => {
     });
 }
 
-let clientes = lerBaseDeDados()
+window.clientes = lerBaseDeDados()
 
 addClientesTable = async (dados) => {
     const infor = await dados;
@@ -53,3 +53,18 @@ addClientesTable = async (dados) => {
     document.querySelector("tbody").innerHTML = layout_tr;
 }
 addClientesTable(clientes)
+
+buscar = async () => {
+
+    const text_name = document.getElementById('pesquisar').value
+
+    const infor = await clientes
+
+    let filter_clientes = infor.filter((cliente) => cliente.name.toLocaleLowerCase().includes(text_name))
+
+    await addClientesTable(filter_clientes)
+}
+
+deletar = async (e) => {
+    console.log(e.id)
+}

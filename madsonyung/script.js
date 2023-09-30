@@ -46,8 +46,9 @@ addClienteTable = async (dados) => {
                 <td>${cliente.phoneNumber}</td>
                 <td>
 
-                <button id="edita-${i}" type="button" class="btn btn-primary">Editar</button>
-                <button id="deletar-${i}" type="button" class="btn btn-danger">Deletar</button>
+                    <button id="edita-${i}" onclick="editar(this)" type="button" class="btn btn-primary">Editar</button>
+                        
+                    <button id="deletar-${i}" onclick="deletar(this)" type="button" class="btn btn-danger">Deletar</button>
                 </td>
              </tr>
 
@@ -59,19 +60,19 @@ addClienteTable = async (dados) => {
   document.querySelector("tbody").innerHTML = layout_tr;
 }
 
-addClienteTable(clientes);
+addClienteTable(window.clientes);
 
 buscar = async () => {
 
     const text_name = document.getElementById("pesquisar").value.toLocaleLowerCase();
 
-    const infor = await clientes;
+    const infor = await window.clientes;
 
-    let filter_clientes = infor.filter((cliente) => cliente.name.toLocaleLowerCase().includes(text_name));
+    let filter_clientes = infor.filter((cliente) => cliente.name.toLocaleLowerCase().includes(text_name))
 
     await addClienteTable(filter_clientes);
 
-    console.log("buscar: ", text_name)
+    // console.log("buscar: ", text_name)
 }
 
 deletar = async (e) => {
